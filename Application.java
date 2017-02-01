@@ -1,27 +1,29 @@
-import java.awt.*;
-
 /**
  * Created by Lori on 2/1/2017.
  */
 public class Application
 {
-    private void backAround(String cat)
+    /**
+     * This method is used to find the last character in the string and
+     * add it to the beginning and the end of the original string
+     * and then print the characters with the string.
+     * @param string the string from which I will extract the last character.
+     */
+    private void backAround(String string)
     {
-        int i = 0;
-
-        if (cat != null && !cat.isEmpty())
+        if (string != null && !string.isEmpty())
         {
-            while (i < cat.length()-1) {
-                i++;
-            }
-            String letter = Character.toString(cat.charAt(i));
-            System.out.print(letter + cat + letter);
+            String letter = Character.toString(string.charAt(string.length()-1));
+            System.out.print(letter + string + letter);
+        }
+        else {
+            System.out.println("You have entered an empty string.");
         }
     }
     public static void main (String []args)
     {
         Application application = new Application();
 
-        application.backAround("cat");
+        application.backAround(null);
     }
 }
